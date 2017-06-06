@@ -9,7 +9,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint src/",
+    "lint": "eslint --ext .jsx --ext .js src",
+    "lint:watch": "esw --watch --ext .jsx --ext .js src",
     "prepublish": "npm run build"
   },
   "repository": {
