@@ -4,7 +4,7 @@
   "description": "Boilerplate to create new modules to be shared on NPM.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel -d dist src --ignore **/*.spec.js",
+    "build": "babel src -d dist --ignore **/*.spec.js",
     "build:watch": "npm run build -- --watch",
     "test": "jest",
     "test:watch": "jest --watch",
