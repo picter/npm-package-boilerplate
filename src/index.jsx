@@ -4,9 +4,10 @@ import { render } from 'react-dom';
 import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
+import './styles.styl';
 
 export const Example = ({ name }) => (
-  <div>
+  <div className='example'>
     <h1>
       <FormattedMessage
         {...messages.hi}
