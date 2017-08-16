@@ -14,26 +14,34 @@ module.exports = {
     umdNamedDefine: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.svg'],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
         test: /\.jsx?/,
         loaders: ['babel-loader'],
+        exclude: /node_modules/,
       },
       {
         test: /\.styl$/,
         loaders: ['style-loader', 'css-loader', 'stylus-loader'],
+        exclude: /node_modules/,
       },
       {
-        test: /\.css/,
-        loaders: ['css-loader'],
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
       },
       {
-        test: /\.svg/,
-        loaders: ['svg-loader'],
+        test: /\.svg$/,
+        loaders: ['url-loader'],
       },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+        exclude: /node_modules/,
+      }
     ],
   },
   plugins: [
