@@ -4,8 +4,8 @@
   "description": "Boilerplate to create new modules to be shared on NPM.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src -d dist --ignore **/*.spec.js",
-    "build:watch": "npm run build -- --watch",
+    "build": "webpack",
+    "build:watch": "webpack -w",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -54,6 +54,12 @@
     "react": "^15.5.4",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
-    "react-intl": "^2.3.0"
+    "react-intl": "^2.3.0",
+    "style-loader": "^0.18.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "svg-loader": "^0.0.2",
+    "watchpack": "^1.4.0",
+    "webpack": "^3.5.4"
   }
 }
